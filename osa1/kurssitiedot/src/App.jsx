@@ -28,22 +28,20 @@ const App = () => {
 }
 
 const Header = (props) => {
-  return (
-    <h1>{props.name}</h1>
-  )
+  return <h1>{props.course.name}</h1>
 }
 
 const Content = (props) => {
   const content = props.course.parts.map(
     (part) => <Part key={part.name} part={part} />
   )
-  return (content)
+  return content
 }
 
 const Part = (props) => {
   console.log(`Render: ${props.part.name}`)
   const part = props.part
-  return (<p>{part.name} {part.exercises}</p>)
+  return <p>{part.name} {part.exercises}</p>
 }
 
 
@@ -53,9 +51,7 @@ const Total = (props) => {
     0
   )
 
-  return (
-    <p>Number of exercises {numExercises}</p>
-  )
+  return <p>Number of exercises {numExercises}</p>
 }
 
 export default App
