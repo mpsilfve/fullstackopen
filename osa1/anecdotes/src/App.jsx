@@ -74,8 +74,8 @@ const Anecdote = ({ header, anecdote, votes }) => {
   return (
     <>
       <h1>{header}</h1>
-      <p>{anecdote}</p>
-      <p>has {votes} votes</p>
+        {anecdote}<br />
+        has {votes} votes<br />
     </>
   )
 }
